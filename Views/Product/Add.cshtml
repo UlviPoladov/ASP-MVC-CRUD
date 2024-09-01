@@ -1,0 +1,48 @@
+﻿@model AddProductViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+</head>
+<body>
+    <section style="display:flex;justify-content:center;border-radius:10px;border:3px solid red;width:50%;background-color:gray;margin:auto;margin-top:50px;">
+
+        <form asp-action="Add" asp-controller="Product" style="width:100%;padding:20px;width:50%;" enctype="multipart/form-data">
+
+            <section>
+                <label asp-for="Product.Name"></label>
+                <input asp-for="Product.Name" />
+                 <span style="color:white;" asp-validation-for="Product.Name"></span>
+            </section>
+            <section>
+                <label asp-for="Product.Description"></label>
+                <input asp-for="Product.Description" />
+                <span style="color:white;" asp-validation-for="Product.Description"></span>  
+            </section>
+            <section>
+                <label asp-for="Product.Discount"></label>
+                <input asp-for="Product.Discount" />
+                <span style="color:white;" asp-validation-for="Product.Discount"></span>
+            </section>
+            <section>
+                <label asp-for="Product.Price"></label>
+                <input asp-for="Product.Price" />
+                <span style="color:white;" asp-validation-for="Product.Price"></span>
+            </section>
+            <section style="text-align:center;">
+                <input style="width:70%;margin:auto;padding:10px;background-color:darkblue;margin-top:20px;color:white" type="file" asp-for="Image" />
+                <span asp-validation-for="Image" style="color:white;"></span>
+            </section>
+            <section style="text-align:center">
+                <button style="width:50%;margin:auto;font-size:1.5em;padding:10px;border:3px solid black;
+                border-radius:10px;background-color:darkgreen;color:white;margin-top:50px" type="submit">
+                    ADD
+                </button>
+            </section>
+
+        </form>
+    </section>
+</body>
+</html>
